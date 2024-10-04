@@ -13,13 +13,12 @@ const categoryStore = useCategoryStore()
         <li class="home">
           <RouterLink to="/">首页</RouterLink>
         </li>
-        <li v-for="category in categoryStore.categoryList" :key="category.id"> <RouterLink to="/">{{ category.name }}</RouterLink> </li>
+        <li v-for="category in categoryStore.categoryList" :key="category.id"> <RouterLink :to="`/category/${category.id}`" active-class="active">{{ category.name }}</RouterLink> </li>
       </ul>
       <div class="search">
         <i class="iconfont icon-search"></i>
         <input type="text" placeholder="搜一搜">
       </div>
-      <!-- 头部购物车 -->
       
     </div>
   </header>
