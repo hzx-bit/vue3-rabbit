@@ -17,7 +17,7 @@ onMounted(()=>{
   <HomePanel title="人气推荐" subTitle="人气推荐 好多商品">
     <ul class="goods-list">
       <li v-for="item in hotList" :key="item.id">
-        <RouterLink to="/">
+        <RouterLink :to="`/detail/${item.id}`">
           <img v-img-lazy="item.picture" :src="item.picture" :alt="item.alt" />
           <p class="title">{{ item.title }}</p>
           <p class="alt">{{ item.alt }}</p>
